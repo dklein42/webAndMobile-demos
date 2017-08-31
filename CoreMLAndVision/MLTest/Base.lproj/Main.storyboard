@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jo1-Uy-hid">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SimpleCoreMLViewController" customModule="MLTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Simple" id="vi9-ah-5kk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-109"/>
+        </scene>
+        <!--Foto Vision-->
+        <scene sceneID="ZGI-GS-Zw7">
+            <objects>
+                <viewController id="bvs-6e-KKV" customClass="FotoVisionViewController" customModule="MLTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Bl-7u-bQM"/>
+                        <viewControllerLayoutGuide type="bottom" id="BUo-ht-6Se"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bLL-xq-uCl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZjV-jn-2mn">
+                                <rect key="frame" x="16" y="20" width="343" height="246"/>
+                                <color key="backgroundColor" red="0.95895086959999998" green="0.95895086959999998" blue="0.95895086959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="MHy-ez-VWj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not classified yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7D-MC-dWc">
+                                <rect key="frame" x="119" y="286" width="136.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6e-lD-6cC">
+                                <rect key="frame" x="147" y="315" width="80" height="30"/>
+                                <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="loadImageTouched:" destination="bvs-6e-KKV" eventType="touchUpInside" id="yUe-Ha-NyI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZjV-jn-2mn" secondAttribute="trailing" id="Lj0-gU-gBQ"/>
+                            <constraint firstItem="A6e-lD-6cC" firstAttribute="centerX" secondItem="bLL-xq-uCl" secondAttribute="centerX" id="SC4-RF-Mh6"/>
+                            <constraint firstItem="L7D-MC-dWc" firstAttribute="topMargin" secondItem="ZjV-jn-2mn" secondAttribute="bottomMargin" constant="36" id="XE4-Jk-TBL"/>
+                            <constraint firstItem="A6e-lD-6cC" firstAttribute="top" secondItem="L7D-MC-dWc" secondAttribute="bottom" constant="8" symbolType="layoutAnchor" id="f8S-Lt-sS3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZjV-jn-2mn" secondAttribute="leading" id="fwQ-jY-Nak"/>
+                            <constraint firstItem="L7D-MC-dWc" firstAttribute="centerX" secondItem="bLL-xq-uCl" secondAttribute="centerX" id="nch-0a-Rfu"/>
+                            <constraint firstItem="ZjV-jn-2mn" firstAttribute="top" secondItem="2Bl-7u-bQM" secondAttribute="bottom" id="vus-uv-yeL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Foto Vision" id="on6-Pd-TKa"/>
+                    <connections>
+                        <outlet property="classificationLabel" destination="L7D-MC-dWc" id="PgV-Y9-ngw"/>
+                        <outlet property="fotoView" destination="ZjV-jn-2mn" id="gJ1-Qe-5PT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2to-yG-wNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="605"/>
+        </scene>
+        <!--Video Vision-->
+        <scene sceneID="rm4-1k-0cS">
+            <objects>
+                <viewController id="myB-aP-KNh" customClass="VideoVisionViewController" customModule="MLTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGI-qB-awc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bHQ-ao-mmn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfl-cH-Dn6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-Cf-WEw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qii-xk-ccN">
+                                        <rect key="frame" x="113" y="572" width="148" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Qii-xk-ccN" firstAttribute="centerX" secondItem="IGJ-Cf-WEw" secondAttribute="centerX" id="0tT-Wm-jBg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qii-xk-ccN" secondAttribute="bottom" constant="25" id="uxc-BC-a3h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IGJ-Cf-WEw" secondAttribute="trailing" id="4wu-XK-vNc"/>
+                            <constraint firstItem="bHQ-ao-mmn" firstAttribute="top" secondItem="IGJ-Cf-WEw" secondAttribute="bottom" id="Qq1-Ub-nwl"/>
+                            <constraint firstItem="IGJ-Cf-WEw" firstAttribute="leading" secondItem="dfl-cH-Dn6" secondAttribute="leading" id="QzB-6s-Oz0"/>
+                            <constraint firstItem="IGJ-Cf-WEw" firstAttribute="top" secondItem="cGI-qB-awc" secondAttribute="bottom" constant="-20" id="err-Ba-0yk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video Vision" id="M6V-te-jgj"/>
+                    <connections>
+                        <outlet property="classificationLabel" destination="Qii-xk-ccN" id="2Fk-1w-xkx"/>
+                        <outlet property="videoView" destination="IGJ-Cf-WEw" id="kC4-vi-xrQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqt-3c-Yvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="1475"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Woz-25-2Xw">
+            <objects>
+                <tabBarController id="Jo1-Uy-hid" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQh-pE-JFB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bvs-6e-KKV" kind="relationship" relationship="viewControllers" id="0rQ-HY-ZSl"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1Jv-aK-Zn2"/>
+                        <segue destination="myB-aP-KNh" kind="relationship" relationship="viewControllers" id="EWe-yV-6lU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeB-zn-Gph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="605"/>
+        </scene>
+    </scenes>
+</document>
