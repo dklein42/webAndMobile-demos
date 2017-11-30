@@ -1,0 +1,16 @@
+ [
+  {
+  "name" : "Jan",
+  "role" : "Student",
+  "id" : 123,
+  "gender" : "male",
+  "firstDayOfEmployment" : "2014-07-01T00:00:00Z"
+  },
+  {
+  "name" : "Laura",
+  "role" : "Assistant",
+  "id" : 321,
+  "gender" : "female",
+  "firstDayOfEmployment" : "2016-01-01T00:00:00+01:00"
+  },
+  ]
