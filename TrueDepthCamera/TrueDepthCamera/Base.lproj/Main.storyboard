@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="TrueFaceCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zt9-3y-uRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLM-58-13l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u11-oU-qQJ">
+                                <rect key="frame" x="260" y="44" width="99" height="110"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="92"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XLM-58-13l" firstAttribute="leading" secondItem="Zt9-3y-uRK" secondAttribute="leading" id="BJS-aZ-2aT"/>
+                            <constraint firstItem="u11-oU-qQJ" firstAttribute="top" secondItem="V62-V2-unE" secondAttribute="top" constant="24" id="R9S-j0-DeR"/>
+                            <constraint firstAttribute="bottom" secondItem="XLM-58-13l" secondAttribute="bottom" id="XdS-VZ-fTf"/>
+                            <constraint firstAttribute="top" secondItem="XLM-58-13l" secondAttribute="top" id="j7a-yw-Chk"/>
+                            <constraint firstAttribute="trailing" secondItem="XLM-58-13l" secondAttribute="trailing" id="v1g-TV-81k"/>
+                            <constraint firstAttribute="trailing" secondItem="u11-oU-qQJ" secondAttribute="trailing" constant="16" id="vYd-J1-E7s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V62-V2-unE"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="XLM-58-13l" id="79i-KI-fXj"/>
+                        <outlet property="smileyLabel" destination="u11-oU-qQJ" id="r8W-Ht-a9c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+</document>
