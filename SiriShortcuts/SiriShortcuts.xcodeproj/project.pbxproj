@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65139457212E15B2005E4A26 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65139456212E15B2005E4A26 /* IntentHandler.swift */; };
+		6513945E212E15B3005E4A26 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A54A22128EBA6005CD2CA /* IntentsUI.framework */; };
+		65139461212E15B3005E4A26 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65139460212E15B3005E4A26 /* IntentViewController.swift */; };
+		65139464212E15B3005E4A26 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65139462212E15B3005E4A26 /* MainInterface.storyboard */; };
+		65139468212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6513945D212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6513946B212E15B3005E4A26 /* MyCoffeeShopIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65139454212E15B2005E4A26 /* MyCoffeeShopIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65139473212E161F005E4A26 /* OrderCoffeeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65922593212CD62400B9D4D9 /* OrderCoffeeIntentHandler.swift */; };
+		65139475212E1669005E4A26 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65922595212CD76B00B9D4D9 /* Coffee.swift */; };
+		65139476212E1F6D005E4A26 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 65139479212E1F6D005E4A26 /* Intents.intentdefinition */; };
+		65139477212E1F6D005E4A26 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 65139479212E1F6D005E4A26 /* Intents.intentdefinition */; };
+		6513947C2130BE07005E4A26 /* ShortcutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513947B2130BE07005E4A26 /* ShortcutsManager.swift */; };
+		6513947F2130C544005E4A26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 651394812130C544005E4A26 /* Localizable.strings */; };
+		654A548F2128B477005CD2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A548E2128B477005CD2CA /* AppDelegate.swift */; };
+		654A54942128B477005CD2CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A54922128B477005CD2CA /* Main.storyboard */; };
+		654A54962128B478005CD2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654A54952128B478005CD2CA /* Assets.xcassets */; };
+		654A54992128B478005CD2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A54972128B478005CD2CA /* LaunchScreen.storyboard */; };
+		654A54A32128EBA6005CD2CA /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A54A12128EBA6005CD2CA /* Intents.framework */; };
+		654A54A42128EBA6005CD2CA /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A54A22128EBA6005CD2CA /* IntentsUI.framework */; };
+		65922596212CD76B00B9D4D9 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65922595212CD76B00B9D4D9 /* Coffee.swift */; };
+		65922598212CE39B00B9D4D9 /* CoffeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65922597212CE39B00B9D4D9 /* CoffeeListViewController.swift */; };
+		6592259A212CE3C400B9D4D9 /* CoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65922599212CE3C400B9D4D9 /* CoffeeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65139466212E15B3005E4A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 654A54832128B477005CD2CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6513945C212E15B3005E4A26;
+			remoteInfo = MyCoffeeShopIntentsUI;
+		};
+		65139469212E15B3005E4A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 654A54832128B477005CD2CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65139453212E15B2005E4A26;
+			remoteInfo = MyCoffeeShopIntents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65139472212E15B3005E4A26 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6513946B212E15B3005E4A26 /* MyCoffeeShopIntents.appex in Embed App Extensions */,
+				65139468212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		65139454212E15B2005E4A26 /* MyCoffeeShopIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyCoffeeShopIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		65139456212E15B2005E4A26 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		65139458212E15B2005E4A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6513945D212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyCoffeeShopIntentsUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		65139460212E15B3005E4A26 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		65139463212E15B3005E4A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		65139465212E15B3005E4A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65139478212E1F6D005E4A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		6513947A212E2006005E4A26 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Intents.strings; sourceTree = "<group>"; };
+		6513947B2130BE07005E4A26 /* ShortcutsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsManager.swift; sourceTree = "<group>"; };
+		651394822130C54F005E4A26 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		654A548B2128B477005CD2CA /* My Coffee Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Coffee Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654A548E2128B477005CD2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		654A54932128B477005CD2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654A54952128B478005CD2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		654A54982128B478005CD2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		654A549A2128B478005CD2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654A54A12128EBA6005CD2CA /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		654A54A22128EBA6005CD2CA /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		65922593212CD62400B9D4D9 /* OrderCoffeeIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoffeeIntentHandler.swift; sourceTree = "<group>"; };
+		65922595212CD76B00B9D4D9 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		65922597212CE39B00B9D4D9 /* CoffeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListViewController.swift; sourceTree = "<group>"; };
+		65922599212CE3C400B9D4D9 /* CoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65139451212E15B2005E4A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6513945A212E15B3005E4A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6513945E212E15B3005E4A26 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A54882128B477005CD2CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A54A32128EBA6005CD2CA /* Intents.framework in Frameworks */,
+				654A54A42128EBA6005CD2CA /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65139455212E15B2005E4A26 /* MyCoffeeShopIntents */ = {
+			isa = PBXGroup;
+			children = (
+				65139456212E15B2005E4A26 /* IntentHandler.swift */,
+				65922593212CD62400B9D4D9 /* OrderCoffeeIntentHandler.swift */,
+				65139458212E15B2005E4A26 /* Info.plist */,
+			);
+			path = MyCoffeeShopIntents;
+			sourceTree = "<group>";
+		};
+		6513945F212E15B3005E4A26 /* MyCoffeeShopIntentsUI */ = {
+			isa = PBXGroup;
+			children = (
+				65139460212E15B3005E4A26 /* IntentViewController.swift */,
+				65139462212E15B3005E4A26 /* MainInterface.storyboard */,
+				65139465212E15B3005E4A26 /* Info.plist */,
+			);
+			path = MyCoffeeShopIntentsUI;
+			sourceTree = "<group>";
+		};
+		654A54822128B477005CD2CA = {
+			isa = PBXGroup;
+			children = (
+				654A548D2128B477005CD2CA /* SiriShortcuts */,
+				65139455212E15B2005E4A26 /* MyCoffeeShopIntents */,
+				6513945F212E15B3005E4A26 /* MyCoffeeShopIntentsUI */,
+				654A548C2128B477005CD2CA /* Products */,
+				654A54A02128EBA6005CD2CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		654A548C2128B477005CD2CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				654A548B2128B477005CD2CA /* My Coffee Shop.app */,
+				65139454212E15B2005E4A26 /* MyCoffeeShopIntents.appex */,
+				6513945D212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		654A548D2128B477005CD2CA /* SiriShortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				654A548E2128B477005CD2CA /* AppDelegate.swift */,
+				654A54922128B477005CD2CA /* Main.storyboard */,
+				65139479212E1F6D005E4A26 /* Intents.intentdefinition */,
+				65922597212CE39B00B9D4D9 /* CoffeeListViewController.swift */,
+				65922599212CE3C400B9D4D9 /* CoffeeViewController.swift */,
+				65922595212CD76B00B9D4D9 /* Coffee.swift */,
+				6513947B2130BE07005E4A26 /* ShortcutsManager.swift */,
+				654A54952128B478005CD2CA /* Assets.xcassets */,
+				654A54972128B478005CD2CA /* LaunchScreen.storyboard */,
+				654A549A2128B478005CD2CA /* Info.plist */,
+				651394812130C544005E4A26 /* Localizable.strings */,
+			);
+			path = SiriShortcuts;
+			sourceTree = "<group>";
+		};
+		654A54A02128EBA6005CD2CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				654A54A12128EBA6005CD2CA /* Intents.framework */,
+				654A54A22128EBA6005CD2CA /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65139453212E15B2005E4A26 /* MyCoffeeShopIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6513946F212E15B3005E4A26 /* Build configuration list for PBXNativeTarget "MyCoffeeShopIntents" */;
+			buildPhases = (
+				65139450212E15B2005E4A26 /* Sources */,
+				65139451212E15B2005E4A26 /* Frameworks */,
+				65139452212E15B2005E4A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCoffeeShopIntents;
+			productName = MyCoffeeShopIntents;
+			productReference = 65139454212E15B2005E4A26 /* MyCoffeeShopIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6513945C212E15B3005E4A26 /* MyCoffeeShopIntentsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6513946C212E15B3005E4A26 /* Build configuration list for PBXNativeTarget "MyCoffeeShopIntentsUI" */;
+			buildPhases = (
+				65139459212E15B3005E4A26 /* Sources */,
+				6513945A212E15B3005E4A26 /* Frameworks */,
+				6513945B212E15B3005E4A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCoffeeShopIntentsUI;
+			productName = MyCoffeeShopIntentsUI;
+			productReference = 6513945D212E15B3005E4A26 /* MyCoffeeShopIntentsUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		654A548A2128B477005CD2CA /* My Coffee Shop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654A549D2128B478005CD2CA /* Build configuration list for PBXNativeTarget "My Coffee Shop" */;
+			buildPhases = (
+				654A54872128B477005CD2CA /* Sources */,
+				654A54882128B477005CD2CA /* Frameworks */,
+				654A54892128B477005CD2CA /* Resources */,
+				65139472212E15B3005E4A26 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65139467212E15B3005E4A26 /* PBXTargetDependency */,
+				6513946A212E15B3005E4A26 /* PBXTargetDependency */,
+			);
+			name = "My Coffee Shop";
+			productName = SiriShortcuts;
+			productReference = 654A548B2128B477005CD2CA /* My Coffee Shop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		654A54832128B477005CD2CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Daniel Klein";
+				TargetAttributes = {
+					65139453212E15B2005E4A26 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					6513945C212E15B3005E4A26 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					654A548A2128B477005CD2CA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 654A54862128B477005CD2CA /* Build configuration list for PBXProject "SiriShortcuts" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 654A54822128B477005CD2CA;
+			productRefGroup = 654A548C2128B477005CD2CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				654A548A2128B477005CD2CA /* My Coffee Shop */,
+				65139453212E15B2005E4A26 /* MyCoffeeShopIntents */,
+				6513945C212E15B3005E4A26 /* MyCoffeeShopIntentsUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65139452212E15B2005E4A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6513945B212E15B3005E4A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65139464212E15B3005E4A26 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A54892128B477005CD2CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6513947F2130C544005E4A26 /* Localizable.strings in Resources */,
+				654A54992128B478005CD2CA /* LaunchScreen.storyboard in Resources */,
+				654A54962128B478005CD2CA /* Assets.xcassets in Resources */,
+				654A54942128B477005CD2CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65139450212E15B2005E4A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65139475212E1669005E4A26 /* Coffee.swift in Sources */,
+				65139477212E1F6D005E4A26 /* Intents.intentdefinition in Sources */,
+				65139457212E15B2005E4A26 /* IntentHandler.swift in Sources */,
+				65139473212E161F005E4A26 /* OrderCoffeeIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65139459212E15B3005E4A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65139461212E15B3005E4A26 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A54872128B477005CD2CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65139476212E1F6D005E4A26 /* Intents.intentdefinition in Sources */,
+				65922598212CE39B00B9D4D9 /* CoffeeListViewController.swift in Sources */,
+				654A548F2128B477005CD2CA /* AppDelegate.swift in Sources */,
+				6513947C2130BE07005E4A26 /* ShortcutsManager.swift in Sources */,
+				6592259A212CE3C400B9D4D9 /* CoffeeViewController.swift in Sources */,
+				65922596212CD76B00B9D4D9 /* Coffee.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65139467212E15B3005E4A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6513945C212E15B3005E4A26 /* MyCoffeeShopIntentsUI */;
+			targetProxy = 65139466212E15B3005E4A26 /* PBXContainerItemProxy */;
+		};
+		6513946A212E15B3005E4A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65139453212E15B2005E4A26 /* MyCoffeeShopIntents */;
+			targetProxy = 65139469212E15B3005E4A26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65139462212E15B3005E4A26 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65139463212E15B3005E4A26 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		65139479212E1F6D005E4A26 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65139478212E1F6D005E4A26 /* Base */,
+				6513947A212E2006005E4A26 /* de */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
+		651394812130C544005E4A26 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				651394822130C54F005E4A26 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		654A54922128B477005CD2CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A54932128B477005CD2CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		654A54972128B478005CD2CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A54982128B478005CD2CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6513946D212E15B3005E4A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = MyCoffeeShopIntentsUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop.MyCoffeeShopIntentsUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6513946E212E15B3005E4A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = MyCoffeeShopIntentsUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop.MyCoffeeShopIntentsUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65139470212E15B3005E4A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = MyCoffeeShopIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop.MyCoffeeShopIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65139471212E15B3005E4A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = MyCoffeeShopIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop.MyCoffeeShopIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		654A549B2128B478005CD2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		654A549C2128B478005CD2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		654A549E2128B478005CD2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = SiriShortcuts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		654A549F2128B478005CD2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255R7PGQHG;
+				INFOPLIST_FILE = SiriShortcuts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.hobsoft.demo.SiriShortcuts.MyCoffeeShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6513946C212E15B3005E4A26 /* Build configuration list for PBXNativeTarget "MyCoffeeShopIntentsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6513946D212E15B3005E4A26 /* Debug */,
+				6513946E212E15B3005E4A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6513946F212E15B3005E4A26 /* Build configuration list for PBXNativeTarget "MyCoffeeShopIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65139470212E15B3005E4A26 /* Debug */,
+				65139471212E15B3005E4A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654A54862128B477005CD2CA /* Build configuration list for PBXProject "SiriShortcuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A549B2128B478005CD2CA /* Debug */,
+				654A549C2128B478005CD2CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654A549D2128B478005CD2CA /* Build configuration list for PBXNativeTarget "My Coffee Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A549E2128B478005CD2CA /* Debug */,
+				654A549F2128B478005CD2CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 654A54832128B477005CD2CA /* Project object */;
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yft-y9-NJ5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Coffee Menu-->
+        <scene sceneID="zn0-gb-mTg">
+            <objects>
+                <tableViewController id="gat-mF-jJu" customClass="CoffeeListViewController" customModule="SiriShortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mgE-Yf-eKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="coffee cell" textLabel="RmV-SC-hs9" style="IBUITableViewCellStyleDefault" id="TKY-cX-E2l">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TKY-cX-E2l" id="6wz-wB-Eru">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RmV-SC-hs9">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FgE-Uv-hCV" kind="show" id="ZEb-0a-urY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gat-mF-jJu" id="Yp7-1m-bdx"/>
+                            <outlet property="delegate" destination="gat-mF-jJu" id="ZS0-D6-jgV"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Delete All Shortcuts" id="ICg-3M-F75">
+                            <connections>
+                                <action selector="deleteAllShortcutsButtonTapped:" destination="gat-mF-jJu" id="sYk-cT-6y2"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Coffee Menu" id="XPJ-1l-Zd4"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ht9-tP-ODm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="-1577"/>
+        </scene>
+        <!--Coffee-->
+        <scene sceneID="xfE-PS-hBx">
+            <objects>
+                <viewController storyboardIdentifier="Coffee View Controller" title="Coffee" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FgE-Uv-hCV" customClass="CoffeeViewController" customModule="SiriShortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzt-xy-6Lo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sa-FI-p9F">
+                                <rect key="frame" x="16" y="83" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Sa-FI-p9F" firstAttribute="top" secondItem="IPP-PT-VJc" secondAttribute="top" constant="19" id="FJU-3V-4Cg"/>
+                            <constraint firstItem="IPP-PT-VJc" firstAttribute="trailing" secondItem="0Sa-FI-p9F" secondAttribute="trailing" constant="16" id="Fqe-I0-5Op"/>
+                            <constraint firstItem="0Sa-FI-p9F" firstAttribute="leading" secondItem="IPP-PT-VJc" secondAttribute="leading" constant="16" id="GjU-bI-EE6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IPP-PT-VJc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="3MU-iw-sDI">
+                        <barButtonItem key="rightBarButtonItem" title="Order" id="EZX-N7-gev">
+                            <connections>
+                                <action selector="orderCoffeeButtonTouched:" destination="FgE-Uv-hCV" id="sPx-u6-tWR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coffeeDescriptionLabel" destination="0Sa-FI-p9F" id="1NZ-0g-hEP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGG-95-IHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933.5999999999999" y="-1577.3613193403301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="az9-hQ-cB3">
+            <objects>
+                <navigationController toolbarHidden="NO" id="yft-y9-NJ5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H9n-lp-3ai">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aLM-fS-tYq">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="gat-mF-jJu" kind="relationship" relationship="rootViewController" id="VuU-Ai-mQm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcK-tC-50C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="-1577"/>
+        </scene>
+    </scenes>
+</document>
