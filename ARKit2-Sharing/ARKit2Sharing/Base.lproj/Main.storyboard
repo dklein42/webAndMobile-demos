@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKit2Sharing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-r3-o2K">
+                                <rect key="frame" x="16" y="617" width="78" height="30"/>
+                                <state key="normal" title="Save World"/>
+                                <connections>
+                                    <action selector="saveWorld" destination="BV1-FR-VrT" eventType="touchUpInside" id="fkJ-Vf-mu7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoD-sH-r6E">
+                                <rect key="frame" x="281" y="617" width="78" height="30"/>
+                                <state key="normal" title="Load World"/>
+                                <connections>
+                                    <action selector="loadWorld" destination="BV1-FR-VrT" eventType="touchUpInside" id="gg8-6c-53a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="api-3y-9gX">
+                                <rect key="frame" x="166.5" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvG-g6-C9L">
+                                <rect key="frame" x="139" y="617" width="97" height="30"/>
+                                <state key="normal" title="Share Session"/>
+                                <connections>
+                                    <action selector="shareSession" destination="BV1-FR-VrT" eventType="touchUpInside" id="8i1-lA-FlQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="top" secondItem="api-3y-9gX" secondAttribute="top" id="0DT-0f-MXN"/>
+                            <constraint firstItem="eoD-sH-r6E" firstAttribute="top" secondItem="BrB-h1-WRS" secondAttribute="bottom" constant="-50" id="1Ql-ye-9gP"/>
+                            <constraint firstItem="eoD-sH-r6E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qvG-g6-C9L" secondAttribute="trailing" constant="8" id="2oh-mq-M1r"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="aTo-r3-o2K" secondAttribute="trailing" constant="-94" id="Fsr-dE-fbL"/>
+                            <constraint firstItem="qvG-g6-C9L" firstAttribute="centerX" secondItem="BrB-h1-WRS" secondAttribute="centerX" id="GRa-Mb-KsK"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="qvG-g6-C9L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aTo-r3-o2K" secondAttribute="trailing" constant="8" id="J1M-gG-kup"/>
+                            <constraint firstItem="qvG-g6-C9L" firstAttribute="firstBaseline" secondItem="eoD-sH-r6E" secondAttribute="firstBaseline" id="TxS-B0-L55"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="eoD-sH-r6E" firstAttribute="leading" secondItem="BrB-h1-WRS" secondAttribute="trailing" constant="-94" id="kIP-4l-tBQ"/>
+                            <constraint firstItem="aTo-r3-o2K" firstAttribute="top" secondItem="BrB-h1-WRS" secondAttribute="bottom" constant="-50" id="lUL-Cs-sH8"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="qvG-g6-C9L" firstAttribute="firstBaseline" secondItem="aTo-r3-o2K" secondAttribute="firstBaseline" id="sKZ-db-yhx"/>
+                            <constraint firstItem="api-3y-9gX" firstAttribute="centerX" secondItem="BrB-h1-WRS" secondAttribute="centerX" id="uzY-mX-E62"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="stateLabel" destination="api-3y-9gX" id="74M-3H-bnW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
