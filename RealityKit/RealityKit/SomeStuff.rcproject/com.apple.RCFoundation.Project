@@ -1,0 +1,529 @@
+{
+  "__content" : [
+    {
+      "scenes" : [
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "alignment" : "horizontal",
+                "name" : "surface"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "hasGroundPlane" : true,
+              "identifier" : "C5439140-82CE-4BBC-B089-550F66D5F2E5",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "29DA1582-CF83-4D14-B77A-F98B7327B149" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Bowling Pin"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "A5AA6ADB-EB9F-4662-A050-BCC0673997CB"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.BowlingPin.9aa80697-49f6-4a4c-8c6c-f5de93bc661b",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "66474C08-8639-4CD0-87AC-A3206798B9C1"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        -0.46902725100517273,
+                        1
+                      ]
+                    }
+                  },
+                  "162FB3EA-5574-4626-9801-2ADF79D9EB78" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Ramen"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "BC49A612-4EB6-4EBB-9D7E-9C064A354599"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Ramen.a07d435c-9090-4eb8-81c2-8ec4facde47b",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "542BC37E-EABC-4BFA-B56E-283014DE6D25"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Bowl"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        -0.19089603424072266,
+                        1.5646220674625511e-07,
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  "24015631-4D83-40A9-BC66-25BA71277ED6" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Pebble 6"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Realistic"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "2661529E-0F3D-4D4E-A2C4-AA208F38CE0B"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Pebble6.8f2476bd-5241-40ef-aa30-c272b7118653",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "9554A891-9068-4BF5-A425-CC66AF5F262C"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Rock"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        -6.9578659911587707e-24,
+                        -3.4972025275692431e-15,
+                        0,
+                        6.9578659911587707e-24,
+                        1,
+                        -1.2261086908343142e-38,
+                        0,
+                        3.4972025275692431e-15,
+                        -1.2071978877985579e-38,
+                        1,
+                        0,
+                        0.41024941205978394,
+                        7.4505805969238281e-06,
+                        -0.7286645770072937,
+                        1
+                      ]
+                    }
+                  },
+                  "A41057C4-6978-486D-8FDC-C7D5A565755E" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stapler"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "06F75686-226E-4F85-A778-75FE106DAB5A"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Stapler.d56854f2-7b78-46bd-9da1-5844f5a5aead",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "76229753-5B8D-4F05-B20D-75E007F1B9EE"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        -1.7767851800760283e-23,
+                        -1.0547118733938987e-14,
+                        0,
+                        1.7767851800760283e-23,
+                        1,
+                        -8.9611175869211428e-38,
+                        0,
+                        1.0547118733938987e-14,
+                        -9.778846987336047e-38,
+                        1,
+                        0,
+                        -0.30522418022155762,
+                        0,
+                        -0.38718670606613159,
+                        1
+                      ]
+                    }
+                  },
+                  "BED512B1-03B1-4142-9C27-C3E1301373E5" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Tennis Ball"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "586263B1-BDDB-4785-A0DC-FE64F4334B95"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.TennisBall.16cd90bc-e260-448d-8bab-2a6efd0f7ab4",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "C173065D-F94B-42A2-947D-9FF62E66B4F9"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Tennis Ball"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        -4.7854077447743323e-24,
+                        -3.9412917374193057e-15,
+                        0,
+                        4.7854077447743323e-24,
+                        1,
+                        -1.1198213233540483e-38,
+                        0,
+                        3.9412917374193057e-15,
+                        -7.662473763937676e-39,
+                        1,
+                        0,
+                        0.31737953424453735,
+                        0,
+                        -0.34574437141418457,
+                        1
+                      ]
+                    }
+                  },
+                  "C8EA3C27-067E-4C0A-ADEE-7EB82FD196FE" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cheeseburger"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "D1E7CBF6-9CA7-4C6B-850F-0B6F4CFAEB93"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.Cheeseburger.d94488a4-8155-4e46-a597-3f36ccc76a40",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "2AD32D18-F5D8-4751-9BA0-36A4A21B1B92"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Burger"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        -4.4637903370070837e-24,
+                        -2.9420910152566648e-15,
+                        0,
+                        4.4637903370070837e-24,
+                        1,
+                        -5.3660062224236653e-39,
+                        0,
+                        2.9420910152566648e-15,
+                        -7.7668733021268035e-39,
+                        1,
+                        0,
+                        0.098321974277496338,
+                        0,
+                        -0.15332047641277313,
+                        1
+                      ]
+                    }
+                  },
+                  "Cube" : null,
+                  "Plate" : null
+                },
+                "factory" : null
+              },
+              "title" : "Szene",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99516934156417847,
+                  2.2351741790771484e-08,
+                  -0.098172515630722046,
+                  0,
+                  -0.054484900087118149,
+                  0.83185595273971558,
+                  -0.55231058597564697,
+                  0,
+                  0.081665210425853729,
+                  0.55499160289764404,
+                  0.82783758640289307,
+                  0,
+                  0.26125702261924744,
+                  0.38718545436859131,
+                  0.46366819739341736,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 4
+        }
+      ],
+      "tags" : {
+        "__content" : [
+          {
+            "tagsStore" : {
+
+            }
+          }
+        ],
+        "__version" : 1
+      }
+    }
+  ],
+  "__version" : 1
+}
