@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ILd-QL-HyR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pZx-p2-6gw">
+            <objects>
+                <tabBarController id="ILd-QL-HyR" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIk-FV-xwi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sXt-0Z-HJS"/>
+                        <segue destination="GTN-J1-WZu" kind="relationship" relationship="viewControllers" id="KvC-pP-Fe5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uY8-A7-Lrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-745" y="113"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LiveScannerViewController" customModule="TextRecognitionWithVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7q-sm-ePF" customClass="VideoView" customModule="TextRecognitionWithVision" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G7q-sm-ePF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NKc-ds-OlD"/>
+                            <constraint firstAttribute="trailing" secondItem="G7q-sm-ePF" secondAttribute="trailing" id="Y2C-Lg-gHF"/>
+                            <constraint firstAttribute="bottom" secondItem="G7q-sm-ePF" secondAttribute="bottom" id="j6J-Cl-EC3"/>
+                            <constraint firstItem="G7q-sm-ePF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y1I-8z-rgM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3hA-Gh-ve2"/>
+                    <connections>
+                        <outlet property="videoView" destination="G7q-sm-ePF" id="NhT-S9-d92"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="-161"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QeX-lj-VyL">
+            <objects>
+                <viewController id="GTN-J1-WZu" customClass="DocumentScannerViewController" customModule="TextRecognitionWithVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dFj-At-Mzo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lm6-YA-tFx">
+                                <rect key="frame" x="20" y="44" width="374" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Recognized Text:
+
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YN4-zK-yJy">
+                                <rect key="frame" x="148.5" y="761" width="117" height="30"/>
+                                <state key="normal" title="Scan Documents"/>
+                                <connections>
+                                    <action selector="scanDocuments:" destination="GTN-J1-WZu" eventType="touchUpInside" id="SUH-J5-mpR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lm6-YA-tFx" firstAttribute="leading" secondItem="OeU-B0-MAP" secondAttribute="leading" constant="20" id="94f-jK-xBA"/>
+                            <constraint firstItem="OeU-B0-MAP" firstAttribute="bottom" secondItem="YN4-zK-yJy" secondAttribute="bottom" constant="22" id="97r-MA-cQ6"/>
+                            <constraint firstItem="YN4-zK-yJy" firstAttribute="centerX" secondItem="OeU-B0-MAP" secondAttribute="centerX" id="Mas-k7-g1l"/>
+                            <constraint firstItem="YN4-zK-yJy" firstAttribute="top" secondItem="Lm6-YA-tFx" secondAttribute="bottom" constant="8" id="XAP-ZK-XzN"/>
+                            <constraint firstItem="Lm6-YA-tFx" firstAttribute="top" secondItem="OeU-B0-MAP" secondAttribute="top" id="m8X-eS-KA1"/>
+                            <constraint firstItem="OeU-B0-MAP" firstAttribute="trailing" secondItem="Lm6-YA-tFx" secondAttribute="trailing" constant="20" id="odn-na-QYZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OeU-B0-MAP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hQx-rd-pN9"/>
+                    <connections>
+                        <outlet property="recognizedTextView" destination="Lm6-YA-tFx" id="ujl-CE-fml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoP-x2-KTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227.536231884058" y="511.60714285714283"/>
+        </scene>
+    </scenes>
+</document>
