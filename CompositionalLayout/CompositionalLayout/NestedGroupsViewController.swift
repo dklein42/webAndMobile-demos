@@ -28,11 +28,11 @@ class NestedGroupsViewController: UICollectionViewController {
         let trailingGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(1.0))
         let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: trailingGroupSize, subitem: trailingItem, count: 2)
         
-        let nestingGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(0.3))
+        let nestingGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
         let nestingGroup = NSCollectionLayoutGroup.horizontal(layoutSize: nestingGroupSize, subitems: [leadingItem, trailingGroup])
         
         let section = NSCollectionLayoutSection(group: nestingGroup)
-        section.orthogonalScrollingBehavior = .groupPagingCentered
+        //section.orthogonalScrollingBehavior = .groupPagingCentered
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
