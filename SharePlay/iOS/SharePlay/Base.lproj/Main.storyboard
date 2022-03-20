@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C41-Hg-ogd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Movie View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="b6O-tG-VbF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="C41-Hg-ogd" customClass="MovieViewController" customModule="SharePlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i4M-Mr-Bfb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-Fb-7sH">
+                                <rect key="frame" x="0.0" y="63" width="414" height="388"/>
+                                <connections>
+                                    <segue destination="X3f-a8-bi8" kind="embed" id="9ll-7J-4um"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-f0-Od8">
+                                <rect key="frame" x="20" y="473" width="94" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Play Movie"/>
+                                <connections>
+                                    <action selector="playMovie" destination="C41-Hg-ogd" eventType="touchUpInside" id="VRh-Ue-Cqg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-7r-DZT">
+                                <rect key="frame" x="125" y="473" width="61" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
+                                <connections>
+                                    <action selector="reset" destination="C41-Hg-ogd" eventType="touchUpInside" id="Yhk-TQ-DHh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="smd-tc-08v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M2h-7r-DZT" firstAttribute="centerY" secondItem="hS1-f0-Od8" secondAttribute="centerY" id="B90-OJ-iM5"/>
+                            <constraint firstItem="DcG-Fb-7sH" firstAttribute="top" secondItem="smd-tc-08v" secondAttribute="top" constant="19" id="CIs-Es-abG"/>
+                            <constraint firstItem="smd-tc-08v" firstAttribute="bottom" secondItem="DcG-Fb-7sH" secondAttribute="bottom" constant="411" id="Hnh-0Y-8IY"/>
+                            <constraint firstItem="hS1-f0-Od8" firstAttribute="leading" secondItem="smd-tc-08v" secondAttribute="leading" constant="20" id="SGF-CJ-m5M"/>
+                            <constraint firstItem="hS1-f0-Od8" firstAttribute="top" secondItem="DcG-Fb-7sH" secondAttribute="bottom" constant="22" id="VOd-vQ-R3J"/>
+                            <constraint firstItem="smd-tc-08v" firstAttribute="trailing" secondItem="DcG-Fb-7sH" secondAttribute="trailing" id="vFg-kI-xun"/>
+                            <constraint firstItem="M2h-7r-DZT" firstAttribute="leading" secondItem="hS1-f0-Od8" secondAttribute="trailing" constant="11" id="wC3-Lm-yKR"/>
+                            <constraint firstItem="DcG-Fb-7sH" firstAttribute="leading" secondItem="smd-tc-08v" secondAttribute="leading" id="xu0-QS-L9b"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6K-JJ-XFP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1462.3188405797102" y="-38.169642857142854"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="vTL-Te-DEO">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="X3f-a8-bi8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="934-Ue-3Ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191" y="-38"/>
         </scene>
     </scenes>
     <resources>

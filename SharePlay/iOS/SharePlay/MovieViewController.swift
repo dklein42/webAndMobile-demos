@@ -1,30 +1,21 @@
 //
-//  ViewController.swift
+//  SimpleMovieViewController.swift
 //  SharePlay
 //
-//  Created by Daniel Klein on 14.03.22.
+//  Created by Daniel Klein on 20.03.22.
 //
 
 import UIKit
 import Combine
-import GroupActivities
 import AVFoundation
 import AVKit
+import GroupActivities
 
 class MovieViewController: UIViewController {
+    private let player = AVPlayer()
+    private var playerViewController: AVPlayerViewController!
     private var subscriptions = Set<AnyCancellable>()
 
-    private let player = AVPlayer()
-    private let waitingInfo = UIView()
-    
-    private lazy var playerViewController: AVPlayerViewController = {
-        let controller = AVPlayerViewController()
-        controller.allowsPictureInPicturePlayback = true
-        controller.canStartPictureInPictureAutomaticallyFromInline = true
-        controller.player = player
-        return controller
-    }()
-    
     private var movie: Movie? {
         didSet {
             guard let movie = movie else { return }
@@ -32,7 +23,7 @@ class MovieViewController: UIViewController {
             player.replaceCurrentItem(with: playerItem)
         }
     }
-    
+        
     private var groupSession: GroupSession<MovieWatchingActivity>? {
         didSet {
             guard let session = groupSession else {
@@ -46,72 +37,86 @@ class MovieViewController: UIViewController {
         }
     }
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        Task {
+            for await groupSession in MovieWatchingActivity.sessions() {
+                self.groupSession = groupSession
+                
+                subscriptions.removeAll()
+                
+                groupSession.$state.sink { [weak self] state in
+                    if case .invalidated = state {
+                        // Setting groupSession to nil invalidates session state
+                        self?.groupSession = nil
+                        self?.subscriptions.removeAll()
+                    }
+                }.store(in: &subscriptions)
+
+                groupSession.$activity.sink { [weak self] activity in
+                    self?.movie = activity.movie
+                }.store(in: &subscriptions)
+
+                groupSession.join()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.modalPresentationStyle = .fullScreen
-        
-        // Child View Controller
-        guard let playerView = playerViewController.view else {
-            fatalError("Unable to get playerController view")
-        }
-        
-        self.addChild(playerViewController)
-        playerView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(playerView)
-        playerViewController.didMove(toParent: self)
-        
-        // Content Overlay - Waiting Info
-        guard let contentOverlayView = playerViewController.contentOverlayView else {
-            fatalError()
-        }
-        
-        contentOverlayView.addSubview(waitingInfo)
-        waitingInfo.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            waitingInfo.topAnchor.constraint(equalTo: contentOverlayView.topAnchor),
-            waitingInfo.leadingAnchor.constraint(equalTo: contentOverlayView.leadingAnchor),
-            waitingInfo.bottomAnchor.constraint(equalTo: contentOverlayView.bottomAnchor),
-            waitingInfo.trailingAnchor.constraint(equalTo: contentOverlayView.trailingAnchor)
-        ])
-        
-        // TODO: Handle showing/hiding waitingInfo
-        
-        MovieCoordinationManager.shared.$currentMovie
-            .receive(on: DispatchQueue.main)
-            .compactMap { $0 } // Filter non-nil
-            .assign(to: \.movie, on: self)
-            .store(in: &subscriptions)
-        
-        MovieCoordinationManager.shared.$groupSession
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.groupSession, on: self)
-            .store(in: &subscriptions)
-        
-        player.publisher(for: \.timeControlStatus, options: [.initial])
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] timeControlStatus in
-                if [.playing, .waitingToPlayAtSpecifiedRate].contains(timeControlStatus) {
-                    // Only show if we're in a paused state
-                    self?.waitingInfo.isHidden = true
-                }
-            }.store(in: &subscriptions)
+        playerViewController.player = player
+//        playerViewController.allowsPictureInPicturePlayback = true
+//        playerViewController.canStartPictureInPictureAutomaticallyFromInline = true
         
         // Observe audio session interruptions
-        NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] notification in
-                let type = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? AVAudioSession.InterruptionType
-                let options = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? AVAudioSession.InterruptionOptions
-                
-                if type == .ended && options == .shouldResume {
-                    self?.player.play()
-                }
-            }.store(in: &subscriptions)
-
-        
+//        NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification)
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] notification in
+//                let type = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? AVAudioSession.InterruptionType
+//                let options = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? AVAudioSession.InterruptionOptions
+//
+//                if type == .ended && options == .shouldResume {
+//                    self?.player.play()
+//                }
+//            }.store(in: &subscriptions)
     }
-
     
+    func shareActivity(movie: Movie) async {
+        let activity = MovieWatchingActivity(movie: movie)
+        
+        switch await activity.prepareForActivation() {
+        case .activationDisabled:
+            // No sharing requested, just do the movie locally
+            self.movie = movie
+        case .activationPreferred:
+            // Sharing requested, so activate and play
+            // This triggers activity observation above
+            _ = try? await activity.activate()
+//        case .cancelled:
+//            break
+        default:
+            break
+        }
 
+        player.play()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let playerViewController = segue.destination as? AVPlayerViewController else { return }
+        self.playerViewController = playerViewController
+    }
+    
+    @IBAction func playMovie() {
+        let movieURL = Bundle.main.url(forResource: "Test", withExtension: "mp4")!
+        let movie = Movie(url: movieURL, title: "Demo Movie", description: "Some demo movie.")
+        
+        Task {
+            await shareActivity(movie: movie)
+        }
+    }
+    
+    @IBAction func reset() {
+        self.groupSession = nil
+    }
 }
-
